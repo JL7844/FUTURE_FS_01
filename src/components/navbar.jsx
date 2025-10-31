@@ -1,10 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import {useRef} from 'react'
+import {useRef, useEffect} from 'react'
+
 const Navbar = ({navOpen}) => {
     
     const lastActiveLink = useRef();
     const activeBox = useRef();
+    const initActiveBox = () =>{
+        activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px';
+        activeBox.current.style.left= lastActiveLink.current.offsetLeft + 'px';
+        activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px';
+        activeBox.current.style.Height = lastActiveLink.current.offsetHeight + 'px';
+    }
+    useEffect(initActiveBox, []);
+    window.addEventListener('resize', initActiveBox);
+    const activeCurrentLink = (event) => {
+        lastActiveLink.current ?.classList.remove('active');
+        event.target.classList.add('active');
+        lastActiveLink.current = event.target;
+        initActiveBox();
+    }
     const navItems = [
         {
             label: 'Home',
@@ -12,6 +27,7 @@ const Navbar = ({navOpen}) => {
             className: 'nav-link active',
             ref: lastActiveLink
         },
+        
         {
             label: 'About',
             link: '#about', 
@@ -38,13 +54,13 @@ const Navbar = ({navOpen}) => {
         }
     ];
   return (
-    <nav className={'navbar' + (navOpen ? 'active':'')}>
+    <nav className={'navbar ' + (navOpen ? 'active':'')}>
         {navItems.map(({label, link, className, ref }, key) => (
             <a href={link}
                 key={key}
                 ref={ref}
                 className={className}
-                onClick={null}>{label}</a>
+                onClick={activeCurrentLink}>{label}</a>
         ))}
         <div className='active-box' ref={activeBox}>
             

@@ -6,6 +6,8 @@ html {
 body{
   @apply bg-zinc-900 text-zinc-50 h-[200vh]
 }
+
+/* navbar */
 .menu-btn{
   @apply w-10 h-10 grid place-items-center 
          bg-zinc-50/10 rounded-xl 
@@ -13,22 +15,47 @@ body{
          backdrop-blur-2xl 
          hover:bg-zinc-50/15 
          transition-transform transition-colors 
-         active:scale-95;
+         active:scale-95 md:hidden;;
 }
 .navbar{
  
   @apply absolute top-full mt-2 right-0 min-w-40 p-2 
-         bg-zinc-50/10 rounded-2xl 
+         bg-zinc-500 rounded-2xl 
          ring-inset ring-1 ring-zinc-50/15 
-         scale-90 isolate blur-sm opacity-0 invisible 
-         transition-all;
+         scale-90 isolate  opacity-0 invisible 
+         transition-all md:static md:flex md:items-center   md:gap-6 md:mt-0 md:p-0 md:bg-transparent md:ring-0 md:opacity-100  md:visible md:scale-100 backdrop-blur-2xl;
 
 
 }
-.logo{
-  @apply w-10 h-10
+
+
+.nav-link{
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-50/50 hover:text-zinc-50 transition-colors
 }
-.navbar.active{
-@apply opacity-100 scale-100  visible
+.nav-link.active{
+  @apply text-zinc-50 duration-500  
+}
+.navbar .active-box {
+  @apply absolute top-2 left-2 right-2 h-9 bg-zinc-900 rounded-lg -z-10 transition-all duration-500;
 }
 
+.navbar.active {
+  @apply opacity-100 scale-100  visible;
+}
+.btn{
+  @apply max-w-max h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm ring-1 ring-zinc-50/5 ring-inset transition-[background-color] hidden md:inline-block
+}
+.btn-secondary{
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80
+}
+
+/* utilities */
+
+.material-symbols-rounded{
+  @apply w-[1em] h-[1em] overflow-hidden;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+/* hero */
+.section{
+  @apply flex flex-col md:flex-row items-center justify-center gap-10 py-20 px-6 md:px-16 bg-white text-zinc-900
+}
