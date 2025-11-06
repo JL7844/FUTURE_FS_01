@@ -11,14 +11,14 @@ const aboutItems = [
 ];
 const About = () => {
   return (
-    <section id='#about' className='sectionAbout'>
+    <section id='about' className='sectionAbout'>
         <div className='mb-20 '>
              <h4 className='text-center text-zinc-400'>Get To Know More</h4>
         <h1 className='text-center text-4xl font-semibold'>About Me</h1>
         </div>
        
         <div className='grid grid-cols-[1fr_300px]'>
-            <div className='bg-zinc-200/90 p-7 rounded-2xl md:p-12'>
+            <div className='bg-zinc-200/90 p-7 rounded-2xl md:p-12 reveal-up'>
                 <p className='text-zinc-900 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]  '>
                     welcome! i&apos;m Yoseph, a profrssional Full-stack developer with a knack for crafiting visually stunning and highly functional websites. Combining creativity and technical expertise. I transform your vision into digital masterpiecethat excels in both appearance and performance.
                 </p>

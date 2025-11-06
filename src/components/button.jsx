@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-const ButtonPrimary = ({label, target, href, icon, classes}) => {
+const ButtonPrimary = ({label, target, href, icon, classes, download}) => {
     if(href){
         return(
-             <a href={href} target={target} className={"btn btn-primary " + classes}>
+             <a href={href} target={target} className={"btn btn-primary " + classes} download={download}>
                 {label }
                 {icon && <span className='material-symbols-rounded' aria-hidden="true">{icon}</span>}
             </a>

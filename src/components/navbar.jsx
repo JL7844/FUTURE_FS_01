@@ -41,8 +41,8 @@ const Navbar = ({navOpen}) => {
            
         },
          {
-            label: 'Projects',
-            link: '#projects', 
+            label: 'Project',
+            link: '#project', 
             className: 'nav-link',
            
         },

@@ -2,7 +2,7 @@ import React from 'react'
 import { ButtonPrimary, ButtonOutline }from './button'
 const Hero = () => {
   return (
-    <section id='#home' className='section'>
+    <section id='home' className='section'>
         <div className='shrink-0'>
             <img src="yoseph.jpg" alt="profile-pic" className='w-60 h-60 md:w-72 md:h-72 rounded-full object-cover shadow-lg' />
         </div>
@@ -13,7 +13,10 @@ const Hero = () => {
             <div className='flex  items-center gap-3 w-90'>
                 <ButtonPrimary 
                 label="Download CV"
-                icon="download"/>
+                icon="download"
+                href="resume.pdf"
+                download="resume.pdf"
+                />
                 <ButtonOutline 
                 href="#about"
                 label="scroll down" 

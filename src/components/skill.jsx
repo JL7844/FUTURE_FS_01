@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Skill = () => {
-  const check = <i class="fa-solid fa-check-circle"></i>
-;
+//   const check = <i class="fa-solid fa-check-circle"></i>
+// ;
 
   const frontSkill = [
     {
@@ -68,9 +68,9 @@ const Skill = () => {
   },
   ];
   return (
-    <div className='mt-20 ' id='#exprience'>
+    <div className='mt-20 ' id='exprience'>
     <h4 className='text-center text-zinc-400'>Explore My</h4>
-        <h1 className='text-center text-4xl font-semibold'>Exprience</h1>
+        <h1 className='text-center text-4xl font-semibold reveal-up'>Exprience</h1>
     <section className='grid grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-[15px] mt-20 lg:mx-20'>
         <div className='p-6 border rounded-lg w-full lg:w-[450px] mx-auto'>
             <span className='flex justify-center mb-4 font-bold'>Frontend Development</span>

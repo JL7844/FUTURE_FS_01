@@ -20,7 +20,7 @@ const Header = () => {
                 </button>
                 <Navbar navOpen={navOpen}/>
             </div>
-            <a href="/contact" className='btn btn-secondary '>Contact Me</a>
+            <a href="#contact" className='btn btn-secondary '>Contact Me</a>
         </div>
     </header>
   )
