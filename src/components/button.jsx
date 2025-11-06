@@ -1,20 +1,59 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+const ButtonPrimary = ({label, target, href, icon, classes}) => {
+    if(href){
+        return(
+             <a href={href} target={target} className={"btn btn-primary " + classes}>
+                {label }
+                {icon && <span className='material-symbols-rounded' aria-hidden="true">{icon}</span>}
+            </a>
+        )
+    } else{
+         return(
+              <button className={"btn btn-primary " + classes}>
+                {label}
+                {icon && <span className='material-symbols-rounded' aria-hidden="true">{icon}</span>}
+            </button>
+         )
+    }
 
-const Button = () => {
-  return (
-     <div className='flex flex-wrap justify-center cursor-pointer md:justify-start gap-4 mt-6'>
-                <a className='px-5 py-3 h-13 border border-zinc-900 rounded-full font-medium hover:bg-zinc-900 hover:text-white transition-colors'>Download CV 
-
-                    <i class="fa-solid fa-download text-xl text-zinc-900 hover:text-zinc-50 transition-colors ml-2"></i>
-
-                </a>
-                <a className='px-5 py-2 h-13 text-zinc-900 rounded-full font-medium cursor-pointer transition-colors'>scroll down
-                    <i class="fa-solid fa-angles-down text-2xl text-zinc-900  ml-2 animate-bounce"></i>
-
-                </a>
-                
-            </div>
-  )
 }
+const ButtonOutline = ({label, target, href, icon, classes}) => {
+    if(href){
+        return(
+             <a href={href} target={target} className={"btn btn-outline " + classes}>
+                {label}
+                     {icon && <span className='material-symbols-rounded ' aria-hidden="true">{icon}</span>}
+                
+               
+            </a>
+        )
+    } else{
+         return(
+              <button className="btn btn-outline flex items-center justify-center gap-2 w-auto px-6">
+    {label}
+    {icon && <span className='material-symbols-rounded'>{icon}</span>}
+</button>
+           
+         )
+    }
 
-export default Button
+}
+ButtonPrimary.propTypes = {
+    label:PropTypes.string.isRequired,
+    href:PropTypes.string,
+    target:PropTypes.string,
+    icon:PropTypes.string,
+    classes:PropTypes.string
+}
+ButtonOutline.propTypes = {
+    label:PropTypes.string.isRequired,
+    href:PropTypes.string,
+    target:PropTypes.string,
+    icon:PropTypes.string,
+    classes:PropTypes.string
+}
+export {
+    ButtonPrimary,
+    ButtonOutline
+}
