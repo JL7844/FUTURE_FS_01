@@ -1,10 +1,10 @@
 import React from 'react'
-import ProjectCard from './ProjectCard'
+import ProjectCard from './ProjectCard.jsx'
 
 const Project = () => {
   const projects = [
     { 
-      imgSrc: '/public/ACH website.jpg',
+      imgSrc: '/public/ach-website.jpg',
        title: 'ACH Company Website',
         tags: ['API', 'Development'],
          projectLink: 'https://github.com/JL7844' 
@@ -16,7 +16,7 @@ const Project = () => {
        projectLink: 'https://github.com/JL7844/campus-transfer' 
       },
     { 
-      imgSrc: '/public/coffee ecommerce.webp',
+      imgSrc: '/public/coffee-ecommerce.webp',
        title: 'Coffee Ecommerce',
         tags: ['API', 'Development'], 
         projectLink: 'https://github.com/JL7844/Udemy-projects' 
